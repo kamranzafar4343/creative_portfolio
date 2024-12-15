@@ -36,6 +36,62 @@
     <![endif]-->
 
 </head>
+<style>
+    .gallery-single {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-single img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-single:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-single:hover .img-overlay {
+    opacity: 1;
+}
+
+.hoverbutton {
+    text-decoration: none;
+}
+
+.hoverbutton button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap Primary Color */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hoverbutton button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+</style>
 <body id="page-top" class="politics_version">
 
     <!-- LOADER -->
@@ -71,7 +127,7 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#tech-stack">Tech Stacks</a>
+              <a class="nav-link js-scroll-trigger" href="#tech-stack">Tech Stack</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a>
@@ -210,84 +266,53 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
-	
 	<div id="portfolio" class="section lb">
-		<div class="container">
-			<div class="section-title text-left">
+        <div class="container">
+            <div class="section-title text-left">
                 <h3>Portfolio</h3>
                 <p>Explore a selection of my recent projects, showcasing my skills in web development and design.</p>
             </div><!-- end title -->
-			
-			<div class="gallery-menu row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group text-left">
-						<button data-filter="*">All</button>
-						<button  class="active" data-filter=".gal_a">Web Development</button>
-						<button data-filter=".gal_c">Graphic Design</button>
-					</div>
-				</div>
-			</div>
-			
-			<div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/1.png" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/1.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-                <div class="col-md-4 col-sm-6 gallery-grid gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/1.12.png" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/1.12.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/1.13 half.png" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/1.13.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
+    
+            <div class="gallery-list row">
+                <!-- Portfolio Item -->
                 <div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/2.2.jpeg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/full page eg.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/new dashboard eg.PNG" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/full page eg.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-                
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/refer front.PNG" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/refer back.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			</div>
-		</div>
-	</div>
+                    <div class="gallery-single fix">
+                        <img src="uploads/1.png" class="img-fluid" alt="Image">
+                        <div class="img-overlay">
+                            <a href="https://app.oradigitals.com" target="_blank" class="hoverbutton global-radius">
+                                <button class="btn btn-primary">Live Preview</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- end gallery-grid -->
+    
+                <!-- Portfolio Item -->
+                <div class="col-md-4 col-sm-6 gallery-grid gal_a">
+                    <div class="gallery-single fix">
+                        <img src="uploads/article front.png" class="img-fluid" alt="Image">
+                        <div class="img-overlay">
+                            <a href="https://openai-gpt4model-article-summarizer.netlify.app/" target="_blank" class="hoverbutton global-radius">
+                                <button class="btn btn-primary">Live Preview</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- end gallery-grid -->
+    
+                <!-- Portfolio Item -->
+                <div class="col-md-4 col-sm-6 gallery-grid gal_a">
+                    <div class="gallery-single fix">
+                        <img src="uploads/2.2.jpeg" class="img-fluid" alt="Image">
+                        <div class="img-overlay">
+                            <a href="https://staging.egrocify.com" target="_blank" class="hoverbutton global-radius">
+                                <button class="btn btn-primary">Live Preview</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- end gallery-grid -->
+            </div><!-- end gallery-list -->
+        </div><!-- end container -->
+    </div><!-- end portfolio -->
+    
 
     <div id="tech-stack" class="section lb">
         <div class="container">
