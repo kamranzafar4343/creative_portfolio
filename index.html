@@ -55,10 +55,12 @@
     transform: scale(1.1); /* Slight zoom effect */
 }
 
+
 .right-box-pro img {
     position: relative;
     z-index: 2;
-    height: 400px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .right-box-pro {
@@ -70,11 +72,11 @@
 .right-box-pro::before {
     content: "";
     background: url(images/country-quilt-dark.png);
-    width: 74%;
+    width: 98%;
     height: 99.45%;
     position: absolute;
-    bottom: -22px;
-    right: 114px;
+    bottom: -0.5rem;
+    right: 1.1rem;
     z-index: 0;
 }
 
